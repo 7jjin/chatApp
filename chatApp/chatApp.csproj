@@ -55,6 +55,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Assets\icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -93,6 +97,29 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\1.png" />
+    <Resource Include="Assets\2.jpg" />
+    <Resource Include="Assets\3.jpg" />
+    <Resource Include="Assets\4.jpg" />
+    <Resource Include="Assets\5.jpg" />
+    <Resource Include="Assets\6.jpg" />
+    <Resource Include="Assets\7.png" />
+    <Resource Include="Assets\8.jpg" />
+    <Resource Include="Assets\connectedworld.png" />
+    <Resource Include="Assets\Media\1.png" />
+    <Resource Include="Assets\Media\2.jpg" />
+    <Resource Include="Assets\Media\3.jpg" />
+    <Resource Include="Assets\Media\4.jpg" />
+    <Resource Include="Assets\Media\5.jpg" />
+    <Resource Include="Assets\Media\6.jpg" />
+    <Resource Include="Assets\Media\7.png" />
+    <Resource Include="Assets\Media\8.jpg" />
+    <Resource Include="Assets\ok.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Database\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

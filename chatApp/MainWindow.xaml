@@ -25,9 +25,12 @@
                 <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <!--채팅 리스트 부분-->
                 <ColumnDefinition Width="Auto"/>
+                <!--대화 창 부분-->
                 <ColumnDefinition/>
-                <ColumnDefinition Width="Auto"/>
+                <!--프로필 정보-->
+                <ColumnDefinition Width="Auto"/>   
             </Grid.ColumnDefinitions>
             
             <!--Title Bar-->
@@ -68,6 +71,89 @@
 
                 </Grid>
             </Border>
+            
+            <!--채팅 리스트 -->
+            <Grid Grid.Row="1" MaxWidth="406">
+                <Grid.RowDefinitions >
+                    <!--Title & Search Option etc.-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Searchbox-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Status Thumbs-->
+                    <RowDefinition Height="Auto"/>
+                    <!--Chats List-->
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                
+                <!--Title & Search Option etc.-->
+                <Grid Height="75" Margin="15,0">
+                    <Grid.ColumnDefinitions>
+                        <!--Title-->
+                        <ColumnDefinition Width="Auto"/>
+                        <!--Blank-->
+                        <ColumnDefinition Width="Auto"/>
+                        <!--Search Button-->
+                        <ColumnDefinition Width="40"/>
+                        <!--More Option Button-->
+                        <ColumnDefinition Width="40"/>
+                        
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock
+                        Text="Chats"
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="20"
+                        FontWeight="SemiBold"/>
+                    
+                    <!--Search Button-->
+                    <Button
+                        Grid.Column="2"
+                        x:Name="btnChatSearchButton"
+                        Content="{StaticResource search}"
+                        Style="{StaticResource IconButtonStyle}"/>
+                    
+                    <!--More option Popup Menu-->
+                    <ToggleButton 
+                        Grid.Column="3"
+                        Name="btnMoreOptions"
+                        Content="{StaticResource more}"
+                        Style="{StaticResource ToggleIconButtonStyle}"/>
+                </Grid>
+                
+                <!--SearchBox-->
+                <!--To-Do: Add Search Box open/close triggers-->
+                <Border
+                    Background="#dce1de"
+                    CornerRadius="15"
+                    Grid.Row="1"
+                    Margin="20"
+                    Height="50"
+                    x:Name="SearchBoxBorder"
+                    FocusManager.FocusedElement="{Binding ElementName=searchQuery}"
+                    >
+
+                    <!--FocusManager.FocusedElement="{Binding ElementName=searchQuery} => to focus our textbox when border
+                    gets focused..-->
+                    <TextBox
+                        Background="Transparent"
+                        BorderThickness="0"
+                        Name="searchQuery"
+                        Padding="12,0"
+                        Text="Search Text"
+                        VerticalContentAlignment="Center"
+                        VerticalAlignment="Stretch"/>
+                </Border>
+                
+                <!--#endregion-->
+                
+                <!--#region Status Thumbnails-->
+                
+                <!--#endregion-->
+                
+                
+                
+            </Grid>
         </Grid>
     </Border>
 </Window>

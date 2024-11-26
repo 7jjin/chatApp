@@ -56,5 +56,7 @@ namespace chatApp
             Application.Current.Shutdown();
 
         }
+
+
     }
 }

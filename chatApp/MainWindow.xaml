@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:chatApp"
+        xmlns:local="clr-namespace:chatApp" xmlns:customcontrols="clr-namespace:chatApp.CustomControls"
         mc:Ignorable="d"
         x:Name="mainWindow"
         AllowsTransparency="True"
@@ -73,7 +73,7 @@
             </Border>
             
             <!--채팅 리스트 -->
-            <Grid Grid.Row="1" MaxWidth="406">
+            <Grid Grid.Row="1" MinWidth="406">
                 <Grid.RowDefinitions >
                     <!--Title & Search Option etc.-->
                     <RowDefinition Height="Auto"/>
@@ -91,7 +91,7 @@
                         <!--Title-->
                         <ColumnDefinition Width="Auto"/>
                         <!--Blank-->
-                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition/>
                         <!--Search Button-->
                         <ColumnDefinition Width="40"/>
                         <!--More Option Button-->
@@ -142,13 +142,13 @@
                         Padding="12,0"
                         Text="Search Text"
                         VerticalContentAlignment="Center"
-                        VerticalAlignment="Stretch"/>
+                        />
                 </Border>
                 
                 <!--#endregion-->
                 
                 <!--#region Status Thumbnails-->
-                
+                <customcontrols:StatusThumbs Grid.Row="2"/>
                 <!--#endregion-->
                 
                 
